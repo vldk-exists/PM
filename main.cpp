@@ -34,9 +34,9 @@ string decrypt(string ciphertext, int shift) {
         char c = ciphertext[i];
     
         if (c >= 'A' && c <= 'Z') {
-            c = ((c - 'A' - shift) % 33) + 'A';
+            c = ((c - 'A' - shift) % 26) + 'A';
         } else if (c >= 'a' && c <= 'z') {
-            c = ((c - 'a' - shift) % 33) + 'a';
+            c = ((c - 'a' - shift) % 26) + 'a';
         }
     
         plaintext += c;
